@@ -34,9 +34,9 @@ public class AGApplication extends Application {
     public void onCreate() {
         super.onCreate();
         try {
-          //  mSocket = IO.socket("https://dev.getpasport.com:8080");
+            mSocket = IO.socket("https://dev.getpasport.com:8080");
 
-            mSocket = IO.socket("https://digimonk.co:8080");
+            //mSocket = IO.socket("https://digimonk.co:8080");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }

@@ -10,6 +10,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -812,6 +813,24 @@ public class GridViewActivity extends BaseActivity implements GridViewAdapter.Li
                         } else if (object.getString(Constant.REPLY_STATUS).equals(Constant.FAIL)) {
 
                             showSnackBar(main, object.getString(Constant.REPLY_MESSAGE));
+
+                            if (dialogActivation != null && dialogActivation.isShowing()) {
+                                dialogActivation.findViewById(R.id.btnActivate).setEnabled(false);
+                            }
+
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if (dialogActivation != null && dialogActivation.isShowing()) {
+                                        dialogActivation.dismiss();
+                                    }
+                                    ManageSession.clearPreference(context);
+                                    Intent loginIntent = new Intent(context, LoginActivity.class);
+                                    loginIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(loginIntent);
+                                }
+                            }, 3000);
 
 //                            Toast.makeText(context, object.getString(Constant.REPLY_MESSAGE),
 //                                    Toast.LENGTH_SHORT).show();

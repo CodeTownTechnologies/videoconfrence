@@ -3,5 +3,6 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">203.190.153.20</domain>
         <domain includeSubdomains="true">digimonk.xyz</domain>
+        <domain includeSubdomains="true">dev.getpasport.com</domain>
     </domain-config>
 </network-security-config>

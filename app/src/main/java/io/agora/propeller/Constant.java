@@ -50,7 +50,8 @@ public class Constant {
  //  public static final String API_BASE_URL = "https://dev.getpasport.com";
 
     /* LIVE API URL */
-    public static final String API_BASE_URL = "https://digimonk.co/videocallapp/";
+    //public static final String API_BASE_URL = "https://digimonk.co/videocallapp/";
+    public static final String API_BASE_URL = "https://dev.getpasport.com/dev/";
 
 
     /* Errors */
