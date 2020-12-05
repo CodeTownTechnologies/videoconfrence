@@ -50,6 +50,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.agora.adapter.GridViewAdapter;
 import io.agora.api.APIClient;
@@ -685,8 +686,8 @@ public class GridViewActivity extends BaseActivity implements GridViewAdapter.Li
                         JSONObject object = new JSONObject(str);
                         JSONArray data = object.optJSONArray(Constant.DATA);
                         JSONObject settingObject = object.getJSONObject("settings");
-                        //TIME_IN_MLS = TimeUnit.MINUTES.toMillis(settingObject.getLong("screen_time_out"));
-                        TIME_IN_MLS = 5000;
+                        TIME_IN_MLS = TimeUnit.MINUTES.toMillis(settingObject.getLong("screen_time_out"));
+                        //TIME_IN_MLS = 5000;
 
                         System.out.println("time in milis===" + TIME_IN_MLS);
 

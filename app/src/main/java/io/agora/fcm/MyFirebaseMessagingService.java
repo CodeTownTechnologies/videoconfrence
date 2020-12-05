@@ -43,7 +43,6 @@ import io.agora.openvcall.AGApplication;
 import io.agora.openvcall.R;
 import io.agora.openvcall.ui.CallActivity;
 import io.agora.openvcall.ui.GridViewActivity;
-import io.agora.openvcall.ui.MainActivity;
 import io.agora.propeller.Constant;
 
 /**

@@ -36,15 +36,7 @@
             android:name=".ui.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".ui.MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/video_conference" >
-            <intent-filter>
-                <action android:name="invite_sent" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+
         <activity
             android:name=".ui.GridViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

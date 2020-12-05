@@ -71,7 +71,7 @@
                         android:background="@color/transparent"
                         android:gravity="center_vertical"
                         android:padding="@dimen/dimen_5dp"
-                        android:digits="abcdefghijklmnopqrstuvwxyz"
+                        android:digits="abcdefghijklmnopqrstuvwxyz0123456789 "
                         android:textColorHint="@color/gray_btn_bg_color" />
 
                     <View
